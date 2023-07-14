@@ -8,12 +8,12 @@ package vista;
  *
  * @author Usuario
  */
-public class FrmEventoDeportivo extends javax.swing.JFrame {
+public class FrmEquipo extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmEntrenador
      */
-    public FrmEventoDeportivo() {
+    public FrmEquipo() {
         initComponents();
     }
 
@@ -37,22 +37,24 @@ public class FrmEventoDeportivo extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtNombreEvento = new javax.swing.JTextField();
-        txtFormato = new javax.swing.JTextField();
-        txtDuracionEvento = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        txtCiudad = new javax.swing.JTextField();
+        txtEstadoEquipo = new javax.swing.JTextField();
+        txtNroJugadores = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Evento Deportivo"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Equipo"));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnAñadir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AgregarEventoDeportivo.png"))); // NOI18N
+        btnAñadir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AñadirPersonaIcono.png"))); // NOI18N
 
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ModificarIcono.png"))); // NOI18N
 
@@ -88,60 +90,74 @@ public class FrmEventoDeportivo extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
-        jLabel2.setText("Nombre del Evento");
+        jLabel2.setText("Nombre");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
         jPanel4.add(jLabel2, gridBagConstraints);
 
-        jLabel3.setText("Formato");
+        jLabel3.setText("Ciudad");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
         jPanel4.add(jLabel3, gridBagConstraints);
 
-        jLabel4.setText("Duración del Evento");
+        jLabel4.setText("Estado Equipo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
         jPanel4.add(jLabel4, gridBagConstraints);
+
+        jLabel5.setText("Nro. Jugadores");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
+        jPanel4.add(jLabel5, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.ipadx = 65;
         gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
-        jPanel4.add(txtNombreEvento, gridBagConstraints);
+        jPanel4.add(txtNombre, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.ipadx = 65;
         gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
-        jPanel4.add(txtFormato, gridBagConstraints);
+        jPanel4.add(txtCiudad, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.ipadx = 65;
         gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
-        jPanel4.add(txtDuracionEvento, gridBagConstraints);
+        jPanel4.add(txtEstadoEquipo, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 65;
+        gridBagConstraints.insets = new java.awt.Insets(5, 4, 5, 4);
+        jPanel4.add(txtNroJugadores, gridBagConstraints);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Nombre del Evento", "Formato", "Duración"
+                "Nombre", "Ciudad", "Estado Equipo", "Nro. Jugadores"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setText("Tabla de Eventos Deportivos");
+        jLabel1.setText("Tabla de Equipos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -160,7 +176,7 @@ public class FrmEventoDeportivo extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(98, 98, 98))
+                .addGap(126, 126, 126))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,13 +239,13 @@ public class FrmEventoDeportivo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmEventoDeportivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmEquipo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmEventoDeportivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmEquipo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmEventoDeportivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmEquipo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmEventoDeportivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmEquipo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -237,7 +253,7 @@ public class FrmEventoDeportivo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmEventoDeportivo().setVisible(true);
+                new FrmEquipo().setVisible(true);
             }
         });
     }
@@ -250,14 +266,16 @@ public class FrmEventoDeportivo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField txtDuracionEvento;
-    private javax.swing.JTextField txtFormato;
-    private javax.swing.JTextField txtNombreEvento;
+    private javax.swing.JTextField txtCiudad;
+    private javax.swing.JTextField txtEstadoEquipo;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNroJugadores;
     // End of variables declaration//GEN-END:variables
 }
